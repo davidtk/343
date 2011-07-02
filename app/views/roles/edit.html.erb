@@ -1,0 +1,27 @@
+<h1>Editing role</h1>
+
+<%= error_messages_for :role %>
+
+<% form_for(@role) do |f| %>
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <b>Permissions</b>
+    <ul>
+    <% for @permission in Permission.find(:all) %>
+      <%= check_box("permission[]", "", {:checked => @role.permissions.include?(@permission)}) %>
+      <%= @permission.name %><br>
+    <% end %>
+    </ul>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @role %> |
+<%= link_to 'Back', roles_path %>

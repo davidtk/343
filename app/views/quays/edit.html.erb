@@ -1,0 +1,27 @@
+<h1>Editing quay</h1>
+
+<%= error_messages_for :quay %>
+
+<% form_for(@quay) do |f| %>
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <b>Contenttype</b><br />
+    <%= f.text_field :contenttype %>
+  </p>
+
+  <p>
+    <b>Status</b><br />
+    <%= f.text_field :status %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @quay %> |
+<%= link_to 'Back', quays_path %>

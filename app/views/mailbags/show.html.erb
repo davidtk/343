@@ -1,0 +1,38 @@
+<p>
+  <b>Title:</b>
+  <%=h @mailbag.title %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%=h User.find(@mailbag.author_id).realname %>
+</p>
+
+<p>
+  <b>Editor:</b>
+  <%=h User.find(@mailbag.editor_id).realname %>
+</p>
+
+<p>
+  <b>Quay:</b>
+  <%=h Quay.find(@mailbag.quay_id).name %>
+</p>
+
+<p>
+  <b>Dearx:</b>
+  <%=h @mailbag.dearx %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @mailbag.body %>
+</p>
+
+<p>
+  <b>Fromx:</b>
+  <%=h @mailbag.fromx %>
+</p>
+
+
+<%= link_to 'Edit', edit_mailbag_path(@mailbag) %> |
+<%= link_to 'Back', mailbags_path %>

@@ -1,0 +1,32 @@
+<h1>Listing mailbags</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Editor</th>
+    <th>Quay</th>
+    <th>Dearx</th>
+    <th>Body</th>
+    <th>Fromx</th>
+  </tr>
+
+<% for mailbag in @mailbags %>
+  <tr>
+    <td><%=h mailbag.title %></td>
+    <td><%=h User.find(mailbag.author_id).realname %></td>
+    <td><%=h User.find(mailbag.editor_id).realname %></td>
+    <td><%=h Quay.find(mailbag.quay_id).name %></td>
+    <td><%=h mailbag.dearx %></td>
+    <td><%=h mailbag.body %></td>
+    <td><%=h mailbag.fromx %></td>
+    <td><%= link_to 'Show', mailbag %></td>
+    <td><%= link_to 'Edit', edit_mailbag_path(mailbag) %></td>
+    <td><%= link_to 'Destroy', mailbag, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New mailbag', new_mailbag_path %>

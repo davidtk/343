@@ -1,0 +1,23 @@
+<p>
+  <b>Title:</b>
+  <%=h @content.title %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%=h @content.author_id %>
+</p>
+
+<p>
+  <b>Editor:</b>
+  <%=h @content.editor_id %>
+</p>
+
+<p>
+  <b>Quay:</b>
+  <%=h @content.quay_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_content_path(@content) %> |
+<%= link_to 'Back', contents_path %>

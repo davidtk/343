@@ -1,0 +1,24 @@
+<h1>Listing quays</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Contenttype</th>
+    <th>Status</th>
+  </tr>
+
+<% for quay in @quays %>
+  <tr>
+    <td><%=h quay.name %></td>
+    <td><%=h quay.contenttype %></td>
+    <td><%=h quay.status %></td>
+    <td><%= link_to 'Show', quay %></td>
+    <td><%= link_to 'Edit', edit_quay_path(quay) %></td>
+    <td><%= link_to 'Destroy', quay, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New quay', new_quay_path %>

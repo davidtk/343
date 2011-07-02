@@ -1,0 +1,24 @@
+<h1>Listing analytics</h1>
+
+<table>
+  <tr>
+    <th>Content</th>
+    <th>Interaction</th>
+    <th>User</th>
+  </tr>
+
+<% for analytic in @analytics %>
+  <tr>
+    <td><%=h analytic.content_id %></td>
+    <td><%=h analytic.interaction_id %></td>
+    <td><%=h analytic.user_id %></td>
+    <td><%= link_to 'Show', analytic %></td>
+    <td><%= link_to 'Edit', edit_analytic_path(analytic) %></td>
+    <td><%= link_to 'Destroy', analytic, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New analytic', new_analytic_path %>

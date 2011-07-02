@@ -1,0 +1,2 @@
+module MailbagsHelper
+end

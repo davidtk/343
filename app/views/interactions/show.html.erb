@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @interaction.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @interaction.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_interaction_path(@interaction) %> |
+<%= link_to 'Back', interactions_path %>

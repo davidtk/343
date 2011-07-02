@@ -1,0 +1,18 @@
+<p>
+  <b>Content:</b>
+  <%=h @analytic.content_id %>
+</p>
+
+<p>
+  <b>Interaction:</b>
+  <%=h @analytic.interaction_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @analytic.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_analytic_path(@analytic) %> |
+<%= link_to 'Back', analytics_path %>

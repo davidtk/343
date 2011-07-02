@@ -1,0 +1,22 @@
+<h1>Editing interaction</h1>
+
+<%= error_messages_for :interaction %>
+
+<% form_for(@interaction) do |f| %>
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <b>Description</b><br />
+    <%= f.text_area :description %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @interaction %> |
+<%= link_to 'Back', interactions_path %>

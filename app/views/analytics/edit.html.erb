@@ -1,0 +1,27 @@
+<h1>Editing analytic</h1>
+
+<%= error_messages_for :analytic %>
+
+<% form_for(@analytic) do |f| %>
+  <p>
+    <b>Content</b><br />
+    <%= f.text_field :content_id %>
+  </p>
+
+  <p>
+    <b>Interaction</b><br />
+    <%= f.text_field :interaction_id %>
+  </p>
+
+  <p>
+    <b>User</b><br />
+    <%= f.text_field :user_id %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @analytic %> |
+<%= link_to 'Back', analytics_path %>

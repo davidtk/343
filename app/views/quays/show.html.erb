@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @quay.name %>
+</p>
+
+<p>
+  <b>Contenttype:</b>
+  <%=h @quay.contenttype %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%=h @quay.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_quay_path(@quay) %> |
+<%= link_to 'Back', quays_path %>
